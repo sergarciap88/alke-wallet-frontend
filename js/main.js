@@ -19,8 +19,8 @@ $(document).ready(function () {
     const email = $('#email').val().trim();
     const password = $('#password').val().trim();
 
-    const validEmail = 'usuario@correo.com';
-    const validPassword = '123456';
+    const validEmail = 'admin@alkewallet.com';
+    const validPassword = 'alkewallet2026';
 
     if (email === validEmail && password === validPassword) {
       $('#loginAlert').addClass('d-none');
