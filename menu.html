@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alke Wallet - Menú Principal</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-light">
+
+  <!-- Navbar Responsive -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+    <div class="container">
+      <a class="navbar-brand font-weight-bold" href="menu.html">Alke Wallet</a>
+      <a href="login.html" class="btn btn-outline-light btn-sm">Cerrar Sesión</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Tarjeta de Saldo Principal -->
+    <div class="card bg-white shadow-sm mb-4">
+      <div class="card-body text-center">
+        <h5 class="text-muted">Saldo Disponible</h5>
+        <h1 class="display-4 text-success font-weight-bold">$<span id="currentBalance">0.00</span></h1>
+      </div>
+    </div>
+
+    <!-- Accesos Rápidos -->
+    <div class="row g-3">
+      <div class="col-md-4">
+        <a href="deposit.html" class="btn btn-outline-primary w-100 py-3 shadow-sm">
+          💵 Realizar Depósito
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="sendmoney.html" class="btn btn-outline-primary w-100 py-3 shadow-sm">
+          💸 Enviar Dinero
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="transactions.html" class="btn btn-outline-primary w-100 py-3 shadow-sm">
+          📊 Últimos Movimientos
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Scripts propios -->
+  <script src="js/wallet.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

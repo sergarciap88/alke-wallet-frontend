@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alke Wallet - Enviar Dinero</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-light">
+
+  <!-- Navbar Responsive -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+    <div class="container">
+      <a class="navbar-brand font-weight-bold" href="menu.html">Alke Wallet</a>
+      <a href="menu.html" class="btn btn-outline-light btn-sm">Volver al Menú</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card p-4 shadow-sm mb-4">
+          <h3 class="text-center text-primary mb-3">Enviar Dinero</h3>
+          <p class="text-center text-muted">Saldo disponible: <strong>$<span id="currentBalance">0.00</span></strong></p>
+          
+          <form id="sendMoneyForm">
+            <div class="mb-3">
+              <label for="contactSearch" class="form-label">Buscar Contacto</label>
+              <input type="text" class="form-control" id="contactSearch" placeholder="Escribe el nombre o alias..." required>
+            </div>
+            <div class="mb-3">
+              <label for="sendAmount" class="form-label">Monto a transferir ($)</label>
+              <input type="number" class="form-control" id="sendAmount" min="1" step="0.01" placeholder="Ej: 500" required>
+            </div>
+            <button type="submit" class="btn btn-success w-100">Enviar Fondos</button>
+          </form>
+
+          <div id="sendAlert" class="alert mt-3 d-none" role="alert"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Scripts propios -->
+  <script src="js/wallet.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
