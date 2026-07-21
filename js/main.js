@@ -1,15 +1,33 @@
+// Funciones de ayuda para obtener y actualizar saldo en localStorage
+function getBalance() {
+  return localStorage.getItem('walletBalance') || '5000.00';
+}
+
+function updateBalance(newBalance) {
+  localStorage.setItem('walletBalance', newBalance);
+}
+
 $(document).ready(function () {
+  // Cargar saldo actual al iniciar cualquier página que tenga la vista de saldo
+  if ($('#currentBalance').length) {
+    $('#currentBalance').text(getBalance());
+  }
+
   // 1. Manejo de Inicio de Sesión (login.html)
   $('#loginForm').on('submit', function (e) {
     e.preventDefault();
     const email = $('#email').val().trim();
     const password = $('#password').val().trim();
 
-    if (email && password) {
+    const validEmail = 'usuario@correo.com';
+    const validPassword = '123456';
+
+    if (email === validEmail && password === validPassword) {
+      $('#loginAlert').addClass('d-none');
       window.location.href = 'menu.html';
     } else {
       $('#loginAlert')
-        .text('Por favor, completa todos los campos.')
+        .text('Correo o contraseña incorrectos. Usa usuario@correo.com / 123456')
         .removeClass('d-none');
     }
   });
